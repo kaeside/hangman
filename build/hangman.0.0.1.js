@@ -66,7 +66,7 @@
 	// Body
 	
 	var Post = function Post() {
-	    var view = '     0000000000000\n     0           0\n     0\n     0\n     0\n     0\n     0\n     0\n     0\n     0\n     0\n     0\n     0\n     0\n     0\n     0\n'.replace(/ /g, ' ');
+	    var view = '\n  0000000000000\n  0           0\n  0\n  0\n  0\n  0\n  0\n  0\n  0\n  0\n  0\n  0\n  0\n  0\n  0\n  0'.replace(/ /g, ' ');
 	    return React.createElement(
 	        'div',
 	        null,
@@ -77,121 +77,84 @@
 	        )
 	    );
 	};
-	/*
-	var Head =
-	    `0000000000000
-	     0           0
-	     0           1
-	     0          1 1
-	     0           1
-	     0
-	     0
-	     0
-	     0
-	     0
-	     0
-	     0
-	     0
-	     0
-	     0
-	     0
-	`
 	
-	var body =
-	    `0000000000000
-	     0           0
-	     0           1
-	     0          1 1
-	     0           1
-	     0           2
-	     0           2
-	     0           2
-	     0
-	     0
-	     0
-	     0
-	     0
-	     0
-	     0
-	     0
-	`
+	var Head = function Head() {
+	    var view = '\n  0000000000000\n  0           0\n  0           1\n  0          1 1\n  0           1\n  0\n  0\n  0\n  0\n  0\n  0\n  0\n  0\n  0\n  0\n  0'.replace(/ /g, ' ');
+	    return React.createElement(
+	        'div',
+	        null,
+	        React.createElement(
+	            'pre',
+	            null,
+	            view
+	        )
+	    );
+	};
 	
-	var leftArm =
-	    `0000000000000
-	     0           0
-	     0           1
-	     0          1 1
-	     0           1
-	     0         3 2
-	     0        3  2
-	     0       3   2
-	     0
-	     0
-	     0
-	     0
-	     0
-	     0
-	     0
-	     0
-	`
+	var Body = function Body() {
+	    var view = '\n  0000000000000\n  0           0\n  0           1\n  0          1 1\n  0           1\n  0           2\n  0           2\n  0           2\n  0\n  0\n  0\n  0\n  0\n  0\n  0\n  0'.replace(/ /g, ' ');
+	    return React.createElement(
+	        'div',
+	        null,
+	        React.createElement(
+	            'pre',
+	            null,
+	            view
+	        )
+	    );
+	};
 	
-	var rightArm =
-	    `0000000000000
-	     0           0
-	     0           1
-	     0          1 1
-	     0           1
-	     0         3 2 4
-	     0        3  2  4
-	     0       3   2   4
-	     0
-	     0
-	     0
-	     0
-	     0
-	     0
-	     0
-	     0
-	`
+	var LeftArm = function LeftArm() {
+	    var view = '\n  0000000000000\n  0           0\n  0           1\n  0          1 1\n  0           1\n  0         3 2\n  0        3  2\n  0       3   2\n  0\n  0\n  0\n  0\n  0\n  0\n  0\n  0'.replace(/ /g, ' ');
+	    return React.createElement(
+	        'div',
+	        null,
+	        React.createElement(
+	            'pre',
+	            null,
+	            view
+	        )
+	    );
+	};
 	
-	var leftLeg =
-	    `0000000000000
-	     0           0
-	     0           1
-	     0          1 1
-	     0           1
-	     0         3 2 4
-	     0        3  2  4
-	     0       3   2   4
-	     0          5
-	     0         5
-	     0        5
-	     0       5
-	     0
-	     0
-	     0
-	     0
-	`
+	var RightArm = function RightArm() {
+	    var view = '\n  0000000000000\n  0           0\n  0           1\n  0          1 1\n  0           1\n  0         3 2 4\n  0        3  2  4\n  0       3   2   4\n  0\n  0\n  0\n  0\n  0\n  0\n  0\n  0'.replace(/ /g, ' ');
+	    return React.createElement(
+	        'div',
+	        null,
+	        React.createElement(
+	            'pre',
+	            null,
+	            view
+	        )
+	    );
+	};
 	
-	var x_X =
-	    `0000000000000
-	     0           0
-	     0           1
-	     0          1 1
-	     0           1
-	     0         3 2 4
-	     0        3  2  4
-	     0       3   2   4
-	     0          5 6
-	     0         5   6
-	     0        5     6
-	     0       5       6
-	     0
-	     0
-	     0
-	     0
-	`
-	*/
+	var LeftLeg = function LeftLeg() {
+	    var view = '\n  0000000000000\n  0           0\n  0           1\n  0          1 1\n  0           1\n  0         3 2 4\n  0        3  2  4\n  0       3   2   4\n  0          5\n  0         5\n  0        5\n  0       5\n  0\n  0\n  0\n  0'.replace(/ /g, ' ');
+	    return React.createElement(
+	        'div',
+	        null,
+	        React.createElement(
+	            'pre',
+	            null,
+	            view
+	        )
+	    );
+	};
+	
+	var X_X = function X_X() {
+	    var view = '\n  0000000000000\n  0           0\n  0           1\n  0          1 1\n  0           1\n  0         3 2 4\n  0        3  2  4\n  0       3   2   4\n  0          5 6\n  0         5   6\n  0        5     6\n  0       5       6\n  0\n  0\n  0\n  0'.replace(/ /g, ' ');
+	    return React.createElement(
+	        'div',
+	        null,
+	        React.createElement(
+	            'pre',
+	            null,
+	            view
+	        )
+	    );
+	};
 	
 	document.addEventListener('DOMContentLoaded', function () {
 	    ReactDOM.render(React.createElement(Post, null), document.getElementById('app'));
