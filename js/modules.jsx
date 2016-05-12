@@ -46,7 +46,7 @@ var Head = function() {
   0`.replace(/ /g, '\u00a0');
     return (
         <div>
-            <pre>view}</pre>
+            <pre>{view}</pre>
 
         </div>
     )
@@ -150,7 +150,7 @@ var LeftLeg = function() {
   0`.replace(/ /g, '\u00a0');
     return (
         <div>
-            <pre>view}</pre>
+            <pre>{view}</pre>
 
         </div>
     )
