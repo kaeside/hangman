@@ -1,18 +1,6 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 
-var HangmanCharlie = React.createClass({
-    getInitialState: function() {
-        return {
-            title: 'Don\'t Kill Charlie!!',
-            stage: 0
-
-        };
-    },
-    render: function() {
-        return (<div><Post /></div>);
-    }
-});
 
 var Post = function() {
     var view = `
@@ -34,7 +22,7 @@ var Post = function() {
   0`.replace(/ /g, '\u00a0');
     return (
         <div>
-            <pre>{view}</pre>
+            <pre ref="zero">{view}</pre>
 
         </div>
     )
@@ -60,7 +48,7 @@ var Head = function() {
   0`.replace(/ /g, '\u00a0');
     return (
         <div>
-            <pre>{view}</pre>
+            <pre>view}</pre>
 
         </div>
     )
@@ -164,7 +152,7 @@ var LeftLeg = function() {
   0`.replace(/ /g, '\u00a0');
     return (
         <div>
-            <pre>{view}</pre>
+            <pre>view}</pre>
 
         </div>
     )
@@ -195,6 +183,22 @@ var X_X = function() {
         </div>
     )
 };
+
+var stagesOfCharlie = [<Post />, <Head />];
+
+var HangmanCharlie = React.createClass({
+    getInitialState: function() {
+        return {
+            title: 'Don\'t Kill Charlie!!',
+            stage: 0
+
+        };
+    },
+    render: function() {
+
+        return (<div>{stagesOfCharlie[this.state.stage]}</div>);
+    }
+});
 
 document.addEventListener('DOMContentLoaded', function() {
     ReactDOM.render(
