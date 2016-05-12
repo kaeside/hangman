@@ -20,9 +20,9 @@ var ReactDOM = require('react-dom');
     // Body
 
 
-
-var post =
-    `0000000000000
+var Post = function() {
+    var view =
+    `     0000000000000
      0           0
      0
      0
@@ -39,8 +39,15 @@ var post =
      0
      0
 `
-
-var head =
+.replace(/ /g, '\u00a0');
+    return (
+        <div>
+            <pre>{view}</pre>
+        
+        </div>
+)};
+/*
+var Head =
     `0000000000000
      0           0
      0           1
@@ -153,3 +160,9 @@ var x_X =
      0
      0
 `
+*/
+
+document.addEventListener('DOMContentLoaded', function(){
+    ReactDOM.render(
+        <Post />, document.getElementById('app'));
+});

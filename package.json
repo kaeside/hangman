@@ -31,7 +31,8 @@
     "clean-css": "^3.4.12",
     "less": "^2.7.1",
     "uglify-js": "^2.6.2",
-    "webpack": "^1.13.0"
+    "webpack": "^1.13.0",
+    "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
     "react": "^15.0.2",
