@@ -8,20 +8,18 @@ var RightArm = require('./modules.jsx').RightArm;
 var LeftLeg = require('./modules.jsx').LeftLeg;
 var X_X = require('./modules.jsx').X_X;
 
-var stagesOfCharlie = [<Post />, <Head />, <Body />, <LeftArm />, <RightArm />, <LeftLeg />, <X_X />, ];
+var stagesOfCharlie = [< Post />, < Head />, < Body />, < LeftArm />, < RightArm />, < LeftLeg />, < X_X />];
 
 var HangmanCharlie = React.createClass({
     getInitialState: function() {
-        return {
-            title: 'Don\'t Kill Charlie!!',
-            stage: 0
-
-        };
+        return {title: 'Don\'t Kill Charlie!!', stage: 0, gameWord: 'moose'};
     },
     onSubmit: function(event) {
         event.preventDefault();
         console.log("die charlie!");
-        this.setState({stage: this.state.stage +=1});
+        this.setState({
+            stage: this.state.stage += 1
+        });
         if (this.state.stage === stagesOfCharlie.length) {
             this.setState({stage: 0});
         }
@@ -30,18 +28,33 @@ var HangmanCharlie = React.createClass({
 
         return (
             <div>
-            <div>{stagesOfCharlie[this.state.stage]}</div>
-                <div><Buttonne onSubmit={this.onSubmit}/></div>
+                <div>{stagesOfCharlie[this.state.stage]}</div>
+                <div>
+                    <GuessForm onSubmit={this.onSubmit}/>
                 </div>
-            );
+                <div><WordBoard gameWord={this.state.gameWord} /></div>
+            </div>
+        );
     }
 });
 
-var Buttonne = function(props) {
+var WordBoard = function (props){
+        var letterSpaces = "";
+    for (var i = 0; i < props.gameWord.length; i+=1) {
+        letterSpaces += "_ ";
+    }
+    letterSpaces.trim();
+    return (
+        <div>{letterSpaces}</div>
+    )
+}
+
+var GuessForm = function(props) {
     return (
         <div>
             <form onSubmit={props.onSubmit}>
-            <button type="submit">Keel Charlie</button>
+            <input type="text" name="guessField"/>
+                <button type="submit">Guess</button>
             </form>
         </div>
     )
@@ -49,5 +62,5 @@ var Buttonne = function(props) {
 
 document.addEventListener('DOMContentLoaded', function() {
     ReactDOM.render(
-        <HangmanCharlie />, document.getElementById('app'));
+        <HangmanCharlie/>, document.getElementById('app'));
 });
