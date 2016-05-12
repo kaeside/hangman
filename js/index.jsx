@@ -16,7 +16,6 @@ var HangmanCharlie = React.createClass({
     },
     onSubmit: function(event) {
         event.preventDefault();
-        console.log("die charlie!");
         this.setState({
             stage: this.state.stage += 1
         });
@@ -53,7 +52,7 @@ var GuessForm = function(props) {
     return (
         <div>
             <form onSubmit={props.onSubmit}>
-            <input type="text" name="guessField"/>
+            <input type="text" ref="guessField"/>
                 <button type="submit">Guess</button>
             </form>
         </div>
