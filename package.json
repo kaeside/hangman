@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "mkdir": "mkdir -p build",
-    "serve": "webpack-dev-server --content-base build/",
+    "serve": "http-server build",
     "build": "npm run clean && npm run mkdir && npm run build:html && npm run build:css && npm run build:jsx",
     "watch": "npm run watch:html & npm run watch:css & npm run watch:jsx",
     "clean": "rm -rf build",
@@ -32,7 +32,7 @@
     "less": "^2.7.1",
     "uglify-js": "^2.6.2",
     "webpack": "^1.13.0",
-    "webpack-dev-server": "^1.14.1"
+    "http-server": "^0.9.0"
   },
   "dependencies": {
     "react": "^15.0.2",

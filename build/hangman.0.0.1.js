@@ -66,10 +66,15 @@
 	// Body
 	
 	var Post = function Post() {
+	    var view = '     0000000000000\n     0           0\n     0\n     0\n     0\n     0\n     0\n     0\n     0\n     0\n     0\n     0\n     0\n     0\n     0\n     0\n'.replace(/ /g, ' ');
 	    return React.createElement(
 	        'div',
 	        null,
-	        '`0000000000000 0           0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 `'
+	        React.createElement(
+	            'pre',
+	            null,
+	            view
+	        )
 	    );
 	};
 	/*
@@ -189,7 +194,7 @@
 	*/
 	
 	document.addEventListener('DOMContentLoaded', function () {
-	    ReactDOM.render(React.createElement(Post, null), document.getElementbyId('app'));
+	    ReactDOM.render(React.createElement(Post, null), document.getElementById('app'));
 	});
 
 /***/ },
