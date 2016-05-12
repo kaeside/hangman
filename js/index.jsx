@@ -2,16 +2,20 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 
 var HangmanCharlie = React.createClass({
-  getInitialState: function() {
-    return {
-      title: 'Don\'t Kill Charlie!!'
-      
+    getInitialState: function() {
+        return {
+            title: 'Don\'t Kill Charlie!!',
+            stage: 0
+
+        };
+    },
+    render: function() {
+        return (<div><Post /></div>);
     }
-  }
-})
+});
 
 var Post = function() {
-   var view =`
+    var view = `
   0000000000000
   0           0
   0
@@ -27,17 +31,17 @@ var Post = function() {
   0
   0
   0
-  0`
-.replace(/ /g, '\u00a0');
+  0`.replace(/ /g, '\u00a0');
     return (
         <div>
             <pre>{view}</pre>
 
         </div>
-)};
+    )
+};
 
 var Head = function() {
-   var view =`
+    var view = `
   0000000000000
   0           0
   0           1
@@ -53,17 +57,17 @@ var Head = function() {
   0
   0
   0
-  0`
-.replace(/ /g, '\u00a0');
+  0`.replace(/ /g, '\u00a0');
     return (
         <div>
             <pre>{view}</pre>
 
         </div>
-)};
+    )
+};
 
 var Body = function() {
-   var view =`
+    var view = `
   0000000000000
   0           0
   0           1
@@ -79,17 +83,17 @@ var Body = function() {
   0
   0
   0
-  0`
-.replace(/ /g, '\u00a0');
+  0`.replace(/ /g, '\u00a0');
     return (
         <div>
             <pre>{view}</pre>
 
         </div>
-)};
+    )
+};
 
 var LeftArm = function() {
-   var view =`
+    var view = `
   0000000000000
   0           0
   0           1
@@ -105,17 +109,17 @@ var LeftArm = function() {
   0
   0
   0
-  0`
-.replace(/ /g, '\u00a0');
+  0`.replace(/ /g, '\u00a0');
     return (
         <div>
             <pre>{view}</pre>
 
         </div>
-)};
+    )
+};
 
 var RightArm = function() {
-   var view =`
+    var view = `
   0000000000000
   0           0
   0           1
@@ -131,17 +135,17 @@ var RightArm = function() {
   0
   0
   0
-  0`
-.replace(/ /g, '\u00a0');
+  0`.replace(/ /g, '\u00a0');
     return (
         <div>
             <pre>{view}</pre>
 
         </div>
-)};
+    )
+};
 
 var LeftLeg = function() {
-   var view =`
+    var view = `
   0000000000000
   0           0
   0           1
@@ -157,17 +161,17 @@ var LeftLeg = function() {
   0
   0
   0
-  0`
-.replace(/ /g, '\u00a0');
+  0`.replace(/ /g, '\u00a0');
     return (
         <div>
             <pre>{view}</pre>
 
         </div>
-)};
+    )
+};
 
 var X_X = function() {
-   var view =`
+    var view = `
   0000000000000
   0           0
   0           1
@@ -183,16 +187,16 @@ var X_X = function() {
   0
   0
   0
-  0`
-.replace(/ /g, '\u00a0');
+  0`.replace(/ /g, '\u00a0');
     return (
         <div>
             <pre>{view}</pre>
 
         </div>
-)};
+    )
+};
 
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', function() {
     ReactDOM.render(
-        <X_X />, document.getElementById('app'));
+        <HangmanCharlie />, document.getElementById('app'));
 });
