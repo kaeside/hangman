@@ -16,6 +16,7 @@ var HangmanCharlie = React.createClass({
     },
     onSubmit: function(event) {
         event.preventDefault();
+        var userGuess = this.refs.guessField
         this.setState({
             stage: this.state.stage += 1
         });
