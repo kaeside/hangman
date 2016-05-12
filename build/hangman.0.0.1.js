@@ -49,21 +49,13 @@
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(33);
 	
-	//Post
+	var HangmanCharlie = React.createClass({
+	    displayName: 'HangmanCharlie',
 	
-	//Hangman Part Components
-	
-	//Head
-	
-	//Arm 1
-	
-	// Arm 2
-	
-	// Leg 1
-	
-	// Leg 2
-	
-	// Body
+	    getInitialState: function getInitialState() {
+	        return;
+	    }
+	});
 	
 	var Post = function Post() {
 	    var view = '\n  0000000000000\n  0           0\n  0\n  0\n  0\n  0\n  0\n  0\n  0\n  0\n  0\n  0\n  0\n  0\n  0\n  0'.replace(/ /g, ' ');
@@ -157,7 +149,7 @@
 	};
 	
 	document.addEventListener('DOMContentLoaded', function () {
-	    ReactDOM.render(React.createElement(Post, null), document.getElementById('app'));
+	    ReactDOM.render(React.createElement(X_X, null), document.getElementById('app'));
 	});
 
 /***/ },

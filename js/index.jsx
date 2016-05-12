@@ -1,24 +1,11 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 
-
-//Post
-
-//Hangman Part Components
-
-
-    //Head
-
-    //Arm 1
-
-    // Arm 2
-
-    // Leg 1
-
-    // Leg 2
-
-    // Body
-
+var HangmanCharlie = React.createClass({
+  getInitialState: function() {
+    return
+  }
+})
 
 var Post = function() {
    var view =`
@@ -204,5 +191,5 @@ var X_X = function() {
 
 document.addEventListener('DOMContentLoaded', function(){
     ReactDOM.render(
-        <Post />, document.getElementById('app'));
+        <X_X />, document.getElementById('app'));
 });
