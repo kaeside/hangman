@@ -22,6 +22,9 @@ var HangmanCharlie = React.createClass({
         event.preventDefault();
         console.log("die charlie!");
         this.setState({stage: this.state.stage +=1});
+        if (this.state.stage === stagesOfCharlie.length) {
+            this.setState({stage: 0});
+        }
     },
     render: function() {
 
