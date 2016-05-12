@@ -53,7 +53,10 @@
 	    displayName: 'HangmanCharlie',
 	
 	    getInitialState: function getInitialState() {
-	        return;
+	        return {
+	            title: 'Don\'t Kill Charlie!!'
+	
+	        };
 	    }
 	});
 	

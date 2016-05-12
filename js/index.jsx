@@ -3,7 +3,10 @@ var ReactDOM = require('react-dom');
 
 var HangmanCharlie = React.createClass({
   getInitialState: function() {
-    return
+    return {
+      title: 'Don\'t Kill Charlie!!'
+      
+    }
   }
 })
 
