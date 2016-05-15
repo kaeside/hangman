@@ -14,13 +14,28 @@ var HangmanCharlie = React.createClass({
     getInitialState: function() {
         return {
             title: 'Don\'t Kill Charlie!!',
-            stage: 0
-
+            stage: 0,
+            guesses: '',
+            word: 'kilogram',
+            example: function(){
+                console.log('hello world')
+            }
         };
     },
+
+    wordGenerator: function(){
+        return(
+            word: 'Kilogram'
+        )
+    },
+
     onSubmit: function(event) {
         event.preventDefault();
-        console.log("die charlie!");
+        var guessedLetter = document.getElementById('guess').value;
+        console.log(this.state.word);
+        this.wordGenerator();
+        this.state.example();
+        this.setState({guesses: guessedLetter});
         this.setState({stage: this.state.stage +=1});
         if (this.state.stage === stagesOfCharlie.length) {
             this.setState({stage: 0});
@@ -32,15 +47,18 @@ var HangmanCharlie = React.createClass({
             <div>
             <div>{stagesOfCharlie[this.state.stage]}</div>
                 <div><Buttonne onSubmit={this.onSubmit}/></div>
+                <div>{this.state.guessedLetter}</div>
                 </div>
             );
     }
 });
 
+
 var Buttonne = function(props) {
     return (
         <div>
             <form onSubmit={props.onSubmit}>
+            <input type="text" id='guess' placeholder="Guess a Letter"/>
             <button type="submit">Keel Charlie</button>
             </form>
         </div>
